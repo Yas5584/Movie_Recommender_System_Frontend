@@ -218,7 +218,7 @@ function App() {
       for (let m of movieList) {
         try {
           const res = await axios.get(
-            `http://127.0.0.1:8000/api/poster/?movie=${encodeURIComponent(m)}`
+            `https://movie-recommender-system-4-f2ie.onrender.com/api/poster/?movie=${encodeURIComponent(m)}`
           );
 
           const data = res.data;
@@ -273,7 +273,7 @@ function App() {
       setLoading(true);
 
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/recommend/?movie=${encodeURIComponent(movie)}`
+        `https://movie-recommender-system-4-f2ie.onrender.com/api/recommend/?movie=${encodeURIComponent(movie)}`
       );
 
       const allMovies = [movie, ...res.data.recommendations];
